@@ -14,7 +14,7 @@
 
 ## Установка
 
-Склонируйте к себе репозиторий **git clone https://github.com/AndreyAlexeev98/TEMPLATE-WEBPACK.git**
+Склонируйте к себе репозиторий **git clone https://github.com/AndreyAlexeev98/TestBooking.git**
 
 Запустите  **npm install**
 

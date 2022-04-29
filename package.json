@@ -1,7 +1,7 @@
 {
-  "name": "webpack-template-pug",
-  "version": "1.3.0",
-  "description": "webpack-template-pug",
+  "name": "TestBooking",
+  "version": "1.0.0",
+  "description": "TestBooking",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --open --config ./config/webpack.dev.conf.js",
@@ -18,7 +18,7 @@
   "author": "Alexeev Andrey",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AndreyAlexeev98/TEMPLATE-WEBPACK.git"
+    "url": "git+https://github.com/AndreyAlexeev98/TestBooking.git"
   },
   "license": "MIT",
   "jest": {

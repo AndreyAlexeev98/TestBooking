@@ -1,0 +1,11 @@
+extends ../layout/base
+
+block variables
+    - var title='Alexeev';
+    - var description='Самый лучший сайт';
+    - var pageClass='index-page';
+
+block content
+  h1 hello world
+  img(src="/assets/img/sea.jpg")
+  +item('Заголовок', 'Описание')

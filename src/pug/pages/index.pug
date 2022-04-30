@@ -6,6 +6,336 @@ block variables
     - var pageClass='index-page';
 
 block content
-  h1 hello world
-  img(src="/assets/img/sea.jpg")
-  +item('Заголовок', 'Описание')
+  .container
+    section.controls
+      .controls__title Bookings
+      .controls__row.sessions
+        .sessions__list
+          .sessions__item.session.active
+            .session__time 
+              .session__date 19 апр
+              .session__clock.clock
+                .clock__start 15:00
+                .clock__dash -
+                .clock__finish 16:30
+            .session__info 
+              .session__person
+                img(src='../assets/img/pictires/people.png')
+              .session__price
+                .session__price-value 178
+                .session__price-currency €
+          .sessions__item.session
+            .session__time 
+              .session__date 19 апр
+              .session__clock.clock
+                .clock__start 15:00
+                .clock__dash -
+                .clock__finish 16:30
+            .session__info 
+              .session__person
+                img(src='../assets/img/pictires/people.png')
+              .session__price
+                .session__price-value 178
+                .session__price-currency €
+          .sessions__item.session
+            .session__time 
+              .session__date 19 апр
+              .session__clock.clock
+                .clock__start 15:00 
+                .clock__dash - 
+                .clock__finish 16:30
+            .session__info 
+              .session__person
+                img.session__person-icon(src='../assets/img/pictires/people.png')
+                img.session__person-icon(src='../assets/img/pictires/people.png')
+                img.session__person-icon(src='../assets/img/pictires/people.png')
+              .session__price
+                .session__price-value 178
+                .session__price-currency €
+        .btn.sessions__btn
+          img.sessions__btn-icon(src='../assets/img/icons/add.svg')
+          .sessions__btn-name Добавить сеанс
+      form.controls__form
+        .controls__row.radioBtn 
+          .controls__col
+            .radioBtn__name.controls__name  место
+            .radioBtn__list 
+              label.radioBtn__item 
+                input.radioBtn__hidden(type="radio" name='place' value='место - к себе' checked)
+                div.radioBtn__visible к себе
+              label.radioBtn__item
+                input.radioBtn__hidden(type="radio" name='place' value='место - к терапевту')
+                div.radioBtn__visible к терапевту
+              label.radioBtn__item
+                input.radioBtn__hidden(type="radio" name='place' value='место - не важно')
+                div.radioBtn__visible не важно
+          .controls__col
+            .radioBtn__name.controls__name  длительность
+            .radioBtn__list 
+              label.radioBtn__item
+                input.radioBtn__hidden(type="radio" name='time' value='длительность - 1 час' id='1hour')
+                div.radioBtn__visible 1 час
+              label.radioBtn__item
+                input.radioBtn__hidden(type="radio" name='time' value='длительность - 1,5 часа' checked id='1.5hour')
+                div.radioBtn__visible 1,5 часа
+              label.radioBtn__item
+                input.radioBtn__hidden(type="radio" name='time' value='длительность - 2 часа' id='2hour')
+                div.radioBtn__visible 2 часа
+      .controls__row.address-choice
+        label.address-choice__item
+          input.address-choice__hidden(type="radio" name='address' value='Город, улица Название 15 дом 2' )
+          .address-choice__visible
+          .address-choice__name-wrap
+            .controls__name Адрес 1
+            div.address-choice__name Город, улица Название 15 дом 2
+        label.address-choice__item
+          input.address-choice__hidden(type="radio" name='address' value='Город, улица Название 15 дом 2' )
+          .address-choice__visible
+          .address-choice__name-wrap
+            .controls__name Адрес 1
+            div.address-choice__name Город, улица Название 15 дом 2
+      .controls__row.address-select
+        input(type="text" placeholder='Укажите другой адрес' name='Другой адрес:').address-select__input
+        .address-select__pointer 
+          img.pointer-icon(src='../assets/img/icons/pointer.svg')
+      .controls__row.calendar
+        .calendar__wrap
+          ul.calendar__list 
+            li.calendar__item.month.vision
+              .month__name 
+                span.name апрель
+                span.line  
+              ul.month__days
+                li.day
+                  .day__number 8
+                  .day__of-the-week.weekend сб
+                li.day
+                  .day__number 9
+                  .day__of-the-week.weekend вс
+                li.day
+                  .day__number 10
+                  .day__of-the-week пн
+                li.day
+                  .day__number 11
+                  .day__of-the-week вт
+                li.day
+                  .day__number 12
+                  .day__of-the-week ср
+                li.day
+                  .day__number 13
+                  .day__of-the-week чт
+                li.day
+                  .day__number 14
+                  .day__of-the-week пт
+                li.day
+                  .day__number 15
+                  .day__of-the-week.weekend сб
+                li.day
+                  .day__number 16
+                  .day__of-the-week.weekend вс
+                li.day
+                  .day__number 17
+                  .day__of-the-week пн
+                li.day
+                  .day__number 18
+                  .day__of-the-week вт
+                li.day
+                  .day__number 19
+                  .day__of-the-week ср
+                li.day
+                  .day__number 20
+                  .day__of-the-week чт
+                li.day
+                  .day__number 21
+                  .day__of-the-week пт
+                li.day
+                  .day__number 22
+                  .day__of-the-week.weekend сб
+                li.day
+                  .day__number 23
+                  .day__of-the-week.weekend вс
+                li.day
+                  .day__number 24
+                  .day__of-the-week пн
+                li.day
+                  .day__number 25
+                  .day__of-the-week вт
+                li.day
+                  .day__number 26
+                  .day__of-the-week ср
+                li.day
+                  .day__number 27
+                  .day__of-the-week чт
+                li.day
+                  .day__number 28
+                  .day__of-the-week пт
+                li.day
+                  .day__number 29
+                  .day__of-the-week.weekend сб
+                li.day
+                  .day__number 30
+                  .day__of-the-week.weekend вс
+
+            li.calendar__item.month
+              .month__name 
+                span.name Май
+                span.line  
+              ul.month__days
+                li.day.active
+                  .day__number 1
+                  .day__of-the-week пн
+                li.day
+                  .day__number 2
+                  .day__of-the-week вт
+                li.day.disactive
+                  .day__number 3
+                  .day__of-the-week ср
+                li.day
+                  .day__number 4
+                  .day__of-the-week чт
+                li.day
+                  .day__number 5
+                  .day__of-the-week пт
+                li.day
+                  .day__number 6
+                  .day__of-the-week.weekend сб
+                li.day
+                  .day__number 7
+                  .day__of-the-week.weekend вс
+                li.day
+                  .day__number 8
+                  .day__of-the-week пн
+                li.day
+                  .day__number 9
+                  .day__of-the-week вт
+                li.day
+                  .day__number 10
+                  .day__of-the-week ср
+                li.day
+                  .day__number 11
+                  .day__of-the-week чт
+                li.day
+                  .day__number 12
+                  .day__of-the-week пт
+                li.day
+                  .day__number 13
+                  .day__of-the-week.weekend сб
+                li.day
+                  .day__number 14
+                  .day__of-the-week.weekend вс
+                li.day.active
+                  .day__number 15
+                  .day__of-the-week пн
+                li.day
+                  .day__number 16
+                  .day__of-the-week вт
+                li.day.disactive
+                  .day__number 17
+                  .day__of-the-week ср
+                li.day
+                  .day__number 18
+                  .day__of-the-week чт
+                li.day
+                  .day__number 19
+                  .day__of-the-week пт
+                li.day
+                  .day__number 20
+                  .day__of-the-week.weekend сб
+                li.day
+                  .day__number 21
+                  .day__of-the-week.weekend вс
+                li.day
+                  .day__number 22
+                  .day__of-the-week пн
+                li.day
+                  .day__number 23
+                  .day__of-the-week вт
+                li.day
+                  .day__number 24
+                  .day__of-the-week ср
+                li.day
+                  .day__number 25
+                  .day__of-the-week чт
+                li.day
+                  .day__number 26
+                  .day__of-the-week пт
+                li.day
+                  .day__number 27
+                  .day__of-the-week.weekend сб
+                li.day
+                  .day__number 28
+                  .day__of-the-week.weekend вс
+                li.day
+                  .day__number 29
+                  .day__of-the-week пн
+                li.day
+                  .day__number 30
+                  .day__of-the-week вт
+                li.day
+                  .day__number 31
+                  .day__of-the-week ср
+        .calendar__pages 
+          a(href='#' data-vector="prev").left
+          a(href='#' data-vector="next").right
+      .controls__row.finish-date
+        .finish-date__name время
+        .dash.dash-small
+        .finish-date__date 
+          span.date 19 апреля
+          .finish-date__time.time
+            span.time__start 15:00
+            span.time__dash -
+            span.time__finish 16:30
+        .dash.dash-long
+      .controls__row.choice-time
+        ul.choice-time__list 
+          li.choice-time__item
+            span 01
+          li.choice-time__item
+            span 02
+          li.choice-time__item
+            span 03
+          li.choice-time__item
+            span 04
+          li.choice-time__item
+            span 05
+          li.choice-time__item
+            span 06
+          li.choice-time__item
+            span 07
+          li.choice-time__item
+            span 08
+          li.choice-time__item
+            span 09
+          li.choice-time__item
+            span 10
+          li.choice-time__item
+            span 11
+          li.choice-time__item
+            span 12
+          li.choice-time__item
+            span 13
+          li.choice-time__item
+            span 14
+          li.choice-time__item
+            span 15
+          li.choice-time__item
+            span 16
+          li.choice-time__item
+            span 17
+          li.choice-time__item
+            span 18
+          li.choice-time__item
+            span 19
+          li.choice-time__item
+            span 20
+          li.choice-time__item
+            span 21
+          li.choice-time__item
+            span 22
+          li.choice-time__item
+            span 23
+          li.choice-time__item
+            span 24
+          li.choice-time__item.hidden.active#active-elem
+            span 25

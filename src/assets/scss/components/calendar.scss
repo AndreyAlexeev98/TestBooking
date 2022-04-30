@@ -1,0 +1,24 @@
+.calendar {
+  position: relative;
+  margin-bottom: 38px;
+  flex-direction: column;
+  &__wrap {
+    padding: 10px;
+    overflow: hidden;
+  }
+  &__list {
+    display: flex;
+    transition: transform .7s;
+  }
+  &__item:not(:last-child) {
+    margin-right: 70px;
+  }
+  &__pages {
+    position: absolute;
+    width: 105%;
+    top: 50%;
+    left: -2.5%;
+    display: flex;
+    justify-content: space-between;
+  }
+}

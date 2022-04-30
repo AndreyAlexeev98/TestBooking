@@ -1,0 +1,75 @@
+.day {
+  font-family: 'Inter';
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 13px;
+  }
+  &:before {
+    content: '';
+    display: block;
+    width: calc(100% + 20px);
+    height: calc(100% + 26px);
+    background-color: transparent;
+    position: absolute;
+    transition: background-color .3s;
+    padding: 14px 10px;
+    border-radius: 3px;
+    left: -10px
+  }
+
+  &__number {
+    font-family: 'Inter';
+    font-size: 20px;
+    color: #222222;
+    transition: color .3s;
+    text-align: center;
+  }
+  &__of-the-week {
+    font-size: 17px;
+    color: rgba(168, 168, 168, .5);
+    text-align: center;
+    &.weekend {
+      color: #DC8D8D;
+    }
+  }
+  &:hover,
+  &.active {
+    .day__number,
+    .day__of-the-week  {
+      color: #fff;
+      transition: color .3s;
+      z-index: 9999;
+    }
+  }
+  &:hover:before,
+  &.active.day:before {
+    background-color: #00A3FF;
+    transition: background-color .3s;
+    z-index: 999;
+  }
+  &.disactive {
+    .day__number {
+      color: #fff;
+      z-index: 1000;
+    } 
+    .day__of-the-week {
+      color: rgba(168, 168, 168, .5);
+      &.weekend {
+        color: #DC8D8D;
+      }
+    }
+  }
+  &.disactive.day:before {
+    background-color: rgba(220, 141, 141, 0.35);
+  }
+  &:hover.disactive {
+    .day__number {
+      color: #fff;
+    }
+  }
+}

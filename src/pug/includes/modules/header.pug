@@ -1,3 +1,21 @@
-header
-  div
-    span I'm header
+header.header 
+  .header__top-background
+    .container
+      .header__top
+        .header__left
+          .logo Booking Massage
+        .header__center
+          button.btn New booking
+          input.booking-input(type="text")
+          input.booking-input(type="text")
+          input.booking-input(type="text")
+        .header__right 
+          .profile-info
+            .profile-info__notification.notification
+              img.notification__icon(src='../assets/img/icons/notification.svg')
+              .notification__counter 1
+            .profile-info__user-avatar 
+              img.icon-avatar(src='../assets/img/pictires/people.png')
+            .profile-info__menu-btn
+              img.icon-menu-btn(src='../assets/img/icons/menu-btn.svg')
+  .header__bottom

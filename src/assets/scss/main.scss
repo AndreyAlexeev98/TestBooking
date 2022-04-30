@@ -5,3 +5,19 @@
 @import "utils/_reset";
 @import "utils/_normalize";
 @import "utils/_functions";
+
+@import "components/header.scss";
+@import "components/profile-info.scss";
+@import "components/notification.scss";
+@import "components/other.scss";
+@import "components/controls.scss";
+@import "components/sessions.scss";
+@import "components/session.scss";
+@import "components/radioBtn.scss";
+@import "components/address-choice.scss";
+@import "components/address-select.scss";
+@import "components/month.scss";
+@import "components/calendar.scss";
+@import "components/day.scss";
+@import "components/finish-date.scss";
+@import "components/choice-time.scss";

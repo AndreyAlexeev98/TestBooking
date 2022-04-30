@@ -1,0 +1,37 @@
+.finish-date {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  &__name {
+    color: #A8A8A8;
+    margin-right: 28px;
+  }
+  &__date {
+    display: flex;
+    align-items: center;
+    margin-right: 27px;
+    .date,
+    .finish-date__time {
+      white-space: nowrap;
+    }
+    .date {
+      margin-right: 25px;
+    }
+  }
+  &__date, &__time {
+    color: #00A3FF;
+  }
+  .dash {
+    height: 1px;
+    background-color: #E5E5E5;
+    display: block;
+  }
+  .dash-small {
+    width: 27px;
+    margin-right: 16px;
+  }
+  .dash-long {
+    width: 100%;
+  }
+}

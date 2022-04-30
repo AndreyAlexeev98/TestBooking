@@ -1,0 +1,20 @@
+.sessions {
+  display: flex;
+  padding-bottom: 28px;
+  margin-bottom: 39px;
+  border-bottom: 1px solid #E5E5E5;
+  &__list {
+    display: flex;
+    margin-right: 28px;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    height: min-content;
+    &-icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 16px;
+    }
+  }
+}

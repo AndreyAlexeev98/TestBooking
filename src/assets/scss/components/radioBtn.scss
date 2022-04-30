@@ -1,0 +1,44 @@
+.radioBtn {
+  margin-bottom: 46px;
+  &__hidden:checked + &__visible {
+    background-color: #00A3FF;
+    transition: background-color .3s, color .3s;
+    color: #fff;
+  } 
+  &__hidden {
+    display: none;
+  }
+  &__visible {
+    padding: 9px 30px;
+    color: #00A3FF;
+    border-color: inherit;
+    border: 1px solid #00A3FF;
+    border-radius: 3px 0px 0px 3px;
+    font-size: 20px;
+    transition: background-color .3s, color .3s;
+    cursor: pointer;
+    line-height: 1.14;
+    &.active,
+    &:hover {
+      background-color: #00A3FF;
+      transition: background-color .3s, color .3s;
+      color: #fff;
+    }
+  }
+  &__list {
+    display: flex;
+  }
+  &__item:not(:last-child) {
+    margin-right: -1px;
+  }
+  &__name {
+    margin-right: 21px;
+  }
+  .controls__col {
+    display: flex;
+    align-items: center;
+  }
+  .controls__col:not(:last-child) {
+    margin-right: 69px;
+  }
+} 

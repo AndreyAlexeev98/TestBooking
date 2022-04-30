@@ -1,0 +1,52 @@
+.session {
+  border: 1px solid #00A3FF;
+  border-radius: 3px 0px 0px 3px;
+  transition: background-color .3s, color .3s;
+  padding: 15px 25px 25px 25px;
+  color:#00A3FF;
+  cursor: pointer;
+  font-weight: 500;
+  &:hover,
+  &.active {
+    background-color: #00A3FF;
+    transition: background-color .3s, color .3s;
+    color: #fff;
+  }
+  &:not(:last-child) {
+    margin-right: -1px;
+  }
+  &__time {
+    margin-bottom: 10px;
+  }
+  .session__date {
+    font-weight: 400;
+  }
+
+  &__person {
+    margin-right: 13px;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    &-icon:not(:first-child) {
+      margin-left: -20px;
+    }
+  }
+  &__price, 
+  &__info {
+    display: flex;
+  } 
+  &__price {
+    align-self: center;
+    margin-top: 10px;
+  }
+  &__price-value {
+    margin-right: 5px;
+  }
+  &__clock {
+    font-weight: 600;
+  }
+}
+

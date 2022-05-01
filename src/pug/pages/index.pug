@@ -20,7 +20,7 @@ block content
                 .clock__finish 16:30
             .session__info 
               .session__person
-                img(src='../assets/img/pictires/people.png')
+                img(src='../assets/img/pictures/people.png')
               .session__price
                 .session__price-value 178
                 .session__price-currency €
@@ -33,7 +33,7 @@ block content
                 .clock__finish 16:30
             .session__info 
               .session__person
-                img(src='../assets/img/pictires/people.png')
+                img(src='../assets/img/pictures/people.png')
               .session__price
                 .session__price-value 178
                 .session__price-currency €
@@ -46,9 +46,9 @@ block content
                 .clock__finish 16:30
             .session__info 
               .session__person
-                img.session__person-icon(src='../assets/img/pictires/people.png')
-                img.session__person-icon(src='../assets/img/pictires/people.png')
-                img.session__person-icon(src='../assets/img/pictires/people.png')
+                img.session__person-icon(src='../assets/img/pictures/people.png')
+                img.session__person-icon(src='../assets/img/pictures/people.png')
+                img.session__person-icon(src='../assets/img/pictures/people.png')
               .session__price
                 .session__price-value 178
                 .session__price-currency €
@@ -60,15 +60,18 @@ block content
           .controls__col
             .radioBtn__name.controls__name  место
             .radioBtn__list 
-              label.radioBtn__item 
-                input.radioBtn__hidden(type="radio" name='place' value='место - к себе' checked)
-                div.radioBtn__visible к себе
-              label.radioBtn__item
-                input.radioBtn__hidden(type="radio" name='place' value='место - к терапевту')
-                div.radioBtn__visible к терапевту
-              label.radioBtn__item
-                input.radioBtn__hidden(type="radio" name='place' value='место - не важно')
-                div.radioBtn__visible не важно
+              //- label.radioBtn__item 
+              //-   input.radioBtn__hidden(type="radio" name='place' value='место - к себе' checked)
+              //-   div.radioBtn__visible к себе
+              //- label.radioBtn__item
+              //-   input.radioBtn__hidden(type="radio" name='place' value='место - к терапевту')
+              //-   div.radioBtn__visible к терапевту
+              //- label.radioBtn__item
+              //-   input.radioBtn__hidden(type="radio" name='place' value='место - не важно')
+              //-   div.radioBtn__visible не важно
+              +changePlaceBtn('к себе')
+              +changePlaceBtn('к терапевту', true)
+              +changePlaceBtn('не важно')
           .controls__col
             .radioBtn__name.controls__name  длительность
             .radioBtn__list 
@@ -82,18 +85,8 @@ block content
                 input.radioBtn__hidden(type="radio" name='time' value='длительность - 2 часа' id='2hour')
                 div.radioBtn__visible 2 часа
       .controls__row.address-choice
-        label.address-choice__item
-          input.address-choice__hidden(type="radio" name='address' value='Город, улица Название 15 дом 2' )
-          .address-choice__visible
-          .address-choice__name-wrap
-            .controls__name Адрес 1
-            div.address-choice__name Город, улица Название 15 дом 2
-        label.address-choice__item
-          input.address-choice__hidden(type="radio" name='address' value='Город, улица Название 15 дом 2' )
-          .address-choice__visible
-          .address-choice__name-wrap
-            .controls__name Адрес 1
-            div.address-choice__name Город, улица Название 15 дом 2
+        +address('Адрес 1','Город, улица Название 15 дом 2')
+        +address('Адрес 2','Город, Название улица 33 дом 9')
       .controls__row.address-select
         input(type="text" placeholder='Укажите другой адрес' name='Другой адрес:').address-select__input
         .address-select__pointer 
@@ -352,78 +345,5 @@ block content
             span Лечебный массаж спины
             img.close-icon(src='../assets/img/icons/close.svg')
       .cards__body 
-        ul.cards__list 
-          li.cards__item.card.active
-            .card__content
-              img.card__img(src='../assets/img/pictures/people.png')
-              .card__name Голубева Алёна Глебовна
-              a(href='#').card__desc
-                img.schedule-icon(src='../assets/img/icons/schedule.svg')
-                span расписание
-              .card__btn 
-                button.card__choice Выбрать
-                button.card__info Подробнее
-              .card__rating 4.8
-              a(href='#')
-                img.card__feedback(src='../assets/img/icons/mail.svg')
-          li.cards__item.card 
-            .card__content
-              img.card__img(src='../assets/img/pictures/people.png')
-              .card__name Голубева Алёна Глебовна
-              .card__desc
-                img.schedule-icon(src='../assets/img/icons/schedule.svg')
-                span расписание
-              .card__btn 
-                button.card__choice Выбрать
-                button.card__info Подробнее
-              .card__rating 4.8
-              img.card__feedback(src='../assets/img/icons/mail.svg')
-          li.cards__item.card 
-            .card__content
-              img.card__img(src='../assets/img/pictures/people.png')
-              .card__name Голубева Алёна Глебовна
-              .card__desc
-                img.schedule-icon(src='../assets/img/icons/schedule.svg')
-                span расписание
-              .card__btn 
-                button.card__choice Выбрать
-                button.card__info Подробнее
-              .card__rating 4.8
-              img.card__feedback(src='../assets/img/icons/mail.svg')
-          li.cards__item.card 
-            .card__content
-              img.card__img(src='../assets/img/pictures/people.png')
-              .card__name Голубева Алёна Глебовна
-              .card__desc
-                img.schedule-icon(src='../assets/img/icons/schedule.svg')
-                span расписание
-              .card__btn 
-                button.card__choice Выбрать
-                button.card__info Подробнее
-              .card__rating 4.8
-              img.card__feedback(src='../assets/img/icons/mail.svg')
-          li.cards__item.card 
-            .card__content
-              img.card__img(src='../assets/img/pictures/people.png')
-              .card__name Голубева Алёна Глебовна
-              .card__desc
-                img.schedule-icon(src='../assets/img/icons/schedule.svg')
-                span расписание
-              .card__btn 
-                button.card__choice Выбрать
-                button.card__info Подробнее
-              .card__rating 4.8
-              img.card__feedback(src='../assets/img/icons/mail.svg')
-          li.cards__item.card 
-            .card__content
-              img.card__img(src='../assets/img/pictures/people.png')
-              .card__name Голубева Алёна Глебовна
-              .card__desc
-                img.schedule-icon(src='../assets/img/icons/schedule.svg')
-                span расписание
-              .card__btn 
-                button.card__choice Выбрать
-                button.card__info Подробнее
-              .card__rating 4.8
-              img.card__feedback(src='../assets/img/icons/mail.svg')
+        +cards([{img: '../assets/img/pictures/people.png', name: 'Голубева Алёна Глебовна', rating: 4.8, active: 'active'},{img: '../assets/img/pictures/people.png', name: 'Федорова Алёна Глебовна', rating: 4.4,   },{img: '../assets/img/pictures/people.png', name: 'Мутко Алёна Глебовна', rating: 4.7 },{img: '../assets/img/pictures/people.png', name: 'Грибоедова Алёна Глебовна', rating: 4.5 },{img: '../assets/img/pictures/people.png', name: 'Афанасьева Алёна Глебовна', rating: 4.1 },{img: '../assets/img/pictures/people.png', name: 'Стародубцева Алёна Глебовна', rating: 4.3 }])
 

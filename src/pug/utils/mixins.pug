@@ -2,3 +2,49 @@ mixin item(title, description)
   .item
     h2(class="item-title")= title
     p(class="item-description")= description
+
+mixin changePlaceBtn(place, checked)
+  label.radioBtn__item 
+    input.radioBtn__hidden(type="radio" name='place' value=`место - ${place}` checked= checked)
+    div.radioBtn__visible= place
+
+mixin address(number, address)
+  label.address-choice__item
+    input.address-choice__hidden(type="radio" name='address' value= address)
+    .address-choice__visible
+    .address-choice__name-wrap
+      .controls__name= number
+      div.address-choice__name= address
+
+mixin navigation(dl_class, link_class)
+  nav(class = 'nav', class = dl_class)
+    - var items = [["Обо мне","about"], ["Навыки","values-sec"], ["Работы","works-sec"], ["Отзывы","feedback-sec"], ["Связаться со мной","feedback-sec-form"]];
+    ul.nav__list
+      each item in items
+        li.nav__item
+          a(href='#'+item[1], class = link_class).nav__link #{item[0]}
+
+mixin socials 
+  - var icons = [["github__1", "https://github.com/AndreyAlexeev98"], ["linkedin", "https://www.linkedin.com/in/%D0%B0%D0%BD%D0%B4%D1%80%D0%B5%D0%B9-%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B5%D0%B2-0bb3121bb/"], ["telegram", "https://t.me/AndreyAlexeev98"], ["phone", "tel:+79052332824"]];
+    ul.socials
+      each item in icons
+        li.socials__item 
+          a(href=item[1],target='_blank').socials__link
+            +icon(item[0], 'socials__icon')
+
+mixin cards(people, active)
+  ul.cards__list 
+    each person in people
+      li.cards__item.card(class= person.active)
+        .card__content
+          img.card__img(src= person.img)
+          .card__name= person.name
+          a(href='#').card__desc
+            img.schedule-icon(src='../assets/img/icons/schedule.svg')
+            span расписание
+          .card__btn 
+            button.card__choice Выбрать
+            button.card__info Подробнее
+          .card__rating= person.rating
+          a(href='#')
+            img.card__feedback(src='../assets/img/icons/mail.svg')

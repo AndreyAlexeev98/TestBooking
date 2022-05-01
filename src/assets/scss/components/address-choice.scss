@@ -27,6 +27,18 @@
     content: '';
   }
   &__item {
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    cursor: pointer;
     display: flex;
+    &:not(:last-child) {
+      margin-right: 59px;
+    }
+    
+  }
+  &__name {
+    font-size: 20px;
+    font-weight: 400;
+    color: #222222;
   }
 }

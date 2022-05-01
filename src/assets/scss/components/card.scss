@@ -41,18 +41,20 @@
     transform: translate(-50%, -50%);
   }
   &__name {
-    font-family: 'Inter';
     font-size: 20px;
     color: #000000;
     margin-bottom: 46px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
   }
   &__desc {
     cursor: pointer;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
     .schedule-icon {
       margin-right: 18px;
     }
     span {
-      font-family: 'Inter';
       font-size: 16px;
       text-decoration-line: underline;
       color: #00A3FF;
@@ -66,6 +68,8 @@
     position: absolute;
     left: -2px;
     top: 30px;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
   }
   &__feedback {
     position: absolute;
@@ -84,7 +88,7 @@
       padding: 9px;
       background-color: transparent;
       color: #A8A8A8;
-      font-family: 'Roboto';
+      font-family: 'Roboto', sans-serif;
       cursor: pointer;
     }
     .card__choice {

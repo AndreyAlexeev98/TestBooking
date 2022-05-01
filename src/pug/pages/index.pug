@@ -2,7 +2,7 @@ extends ../layout/base
 
 block variables
     - var title='Alexeev';
-    - var description='Самый лучший сайт';
+    - var description='Хороший сайт';
     - var pageClass='index-page';
 
 block content
@@ -175,7 +175,6 @@ block content
                 li.day
                   .day__number 30
                   .day__of-the-week.weekend вс
-
             li.calendar__item.month
               .month__name 
                 span.name Май
@@ -339,3 +338,92 @@ block content
             span 24
           li.choice-time__item.hidden.active#active-elem
             span 25
+    section.cards
+      .cards__header
+        h3.cards__title Тепаверты
+        button.cards__btn 
+          span Параметры
+          img.parameters-icon(src='../assets/img/icons/parameters.svg')
+        .cards__parameters.pareneters 
+          button.parameters__btn
+            span Общий массаж
+            img.close-icon(src='../assets/img/icons/close.svg')
+          button.parameters__btn
+            span Лечебный массаж спины
+            img.close-icon(src='../assets/img/icons/close.svg')
+      .cards__body 
+        ul.cards__list 
+          li.cards__item.card.active
+            .card__content
+              img.card__img(src='../assets/img/pictures/people.png')
+              .card__name Голубева Алёна Глебовна
+              a(href='#').card__desc
+                img.schedule-icon(src='../assets/img/icons/schedule.svg')
+                span расписание
+              .card__btn 
+                button.card__choice Выбрать
+                button.card__info Подробнее
+              .card__rating 4.8
+              a(href='#')
+                img.card__feedback(src='../assets/img/icons/mail.svg')
+          li.cards__item.card 
+            .card__content
+              img.card__img(src='../assets/img/pictures/people.png')
+              .card__name Голубева Алёна Глебовна
+              .card__desc
+                img.schedule-icon(src='../assets/img/icons/schedule.svg')
+                span расписание
+              .card__btn 
+                button.card__choice Выбрать
+                button.card__info Подробнее
+              .card__rating 4.8
+              img.card__feedback(src='../assets/img/icons/mail.svg')
+          li.cards__item.card 
+            .card__content
+              img.card__img(src='../assets/img/pictures/people.png')
+              .card__name Голубева Алёна Глебовна
+              .card__desc
+                img.schedule-icon(src='../assets/img/icons/schedule.svg')
+                span расписание
+              .card__btn 
+                button.card__choice Выбрать
+                button.card__info Подробнее
+              .card__rating 4.8
+              img.card__feedback(src='../assets/img/icons/mail.svg')
+          li.cards__item.card 
+            .card__content
+              img.card__img(src='../assets/img/pictures/people.png')
+              .card__name Голубева Алёна Глебовна
+              .card__desc
+                img.schedule-icon(src='../assets/img/icons/schedule.svg')
+                span расписание
+              .card__btn 
+                button.card__choice Выбрать
+                button.card__info Подробнее
+              .card__rating 4.8
+              img.card__feedback(src='../assets/img/icons/mail.svg')
+          li.cards__item.card 
+            .card__content
+              img.card__img(src='../assets/img/pictures/people.png')
+              .card__name Голубева Алёна Глебовна
+              .card__desc
+                img.schedule-icon(src='../assets/img/icons/schedule.svg')
+                span расписание
+              .card__btn 
+                button.card__choice Выбрать
+                button.card__info Подробнее
+              .card__rating 4.8
+              img.card__feedback(src='../assets/img/icons/mail.svg')
+          li.cards__item.card 
+            .card__content
+              img.card__img(src='../assets/img/pictures/people.png')
+              .card__name Голубева Алёна Глебовна
+              .card__desc
+                img.schedule-icon(src='../assets/img/icons/schedule.svg')
+                span расписание
+              .card__btn 
+                button.card__choice Выбрать
+                button.card__info Подробнее
+              .card__rating 4.8
+              img.card__feedback(src='../assets/img/icons/mail.svg')
+

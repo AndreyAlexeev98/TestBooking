@@ -1,0 +1,38 @@
+.cards {
+  margin-bottom: 76px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 40px;
+  }
+  &__title {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 36px;
+    color: #222222;
+  }
+  &__btn {
+    background-color: #00A3FF;
+    border-radius: 3px;
+    padding: 9px 28px;
+    color: #fff;
+    font-family: 'Roboto';
+    font-size: 20px;
+    cursor: pointer;
+    span {
+      margin-right: 22px;
+    }
+  }
+  &__parameters {
+    position: absolute;
+    top: 25px;
+    left: 208px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr;
+    grid-gap: 50px;
+  }
+}

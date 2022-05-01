@@ -7,6 +7,12 @@
     display: flex;
     margin-right: 28px;
   }
+  &__item:first-child {
+    border-radius: 3px 0 0 3px;
+  }
+  &__item:last-child {
+    border-radius: 0 3px 3px 0;
+  }
   &__btn {
     display: flex;
     align-items: center;

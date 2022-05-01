@@ -1,0 +1,108 @@
+.card {
+  &__content {
+    position: relative;
+    background: rgba(0,0,0,0.02);
+    backdrop-filter: blur(50px);
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: border-color .3s;
+    padding: 129px 32px 72px;
+    margin-top: 100px;
+    &:hover {
+      border-color: #00A3FF;
+      transition: border-color .3s;
+      & .card__img {
+        border-color: #00A3FF;
+        transition: border-color .3s;
+      }
+    }
+  }
+  &.active {
+    .card__content {
+      border-color: #00A3FF;
+      transition: border-color .3s;
+    }
+    .card__choice {
+      background-color: #00A3FF;
+      backdrop-filter: blur(25px);
+      color: #fff;
+    }
+  }
+  
+  &__img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: border-color .3s;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__name {
+    font-family: 'Inter';
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 46px;
+  }
+  &__desc {
+    cursor: pointer;
+    .schedule-icon {
+      margin-right: 18px;
+    }
+    span {
+      font-family: 'Inter';
+      font-size: 16px;
+      text-decoration-line: underline;
+      color: #00A3FF;
+    }
+  } 
+  &__rating {
+    padding: 7px 17px 7px 13px;
+    background-color: #00A3FF;
+    border-radius: 0 20px 20px 0;
+    color: #fff;
+    position: absolute;
+    left: -2px;
+    top: 30px;
+  }
+  &__feedback {
+    position: absolute;
+    top: 38px;
+    right: 32px;
+    cursor: pointer;
+  }
+  &__btn {
+    position: absolute;
+    bottom: -2px;
+    left: -2px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    & button {
+      padding: 9px;
+      background-color: transparent;
+      color: #A8A8A8;
+      font-family: 'Roboto';
+      cursor: pointer;
+    }
+    .card__choice {
+      flex: 1;
+      background-color: rgba(0, 0, 0, 0.05);
+      border-radius: 0px 20px;
+      transition: background-color .3s;
+      transition: background-color .3s, color .3s;
+      &:hover {
+        background-color: #00A3FF;
+        backdrop-filter: blur(25px);
+        transition: background-color .3s, color .3s;
+        color: #fff;
+      }
+    }
+    .card__info {
+      flex: 1;
+    }
+  }
+  
+} 

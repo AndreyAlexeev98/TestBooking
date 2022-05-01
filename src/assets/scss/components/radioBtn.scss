@@ -12,8 +12,6 @@
     padding: 9px 30px;
     color: #00A3FF;
     border-color: inherit;
-    border: 1px solid #00A3FF;
-    border-radius: 3px 0px 0px 3px;
     font-size: 20px;
     transition: background-color .3s, color .3s;
     cursor: pointer;
@@ -28,8 +26,17 @@
   &__list {
     display: flex;
   }
+  &__item {
+    border: 1px solid #00a3ff;
+  }
   &__item:not(:last-child) {
     margin-right: -1px;
+  }
+  &__item:first-child {
+    border-radius: 3px 0 0 3px;
+  }
+  &__item:last-child {
+    border-radius: 0 3px 3px 0;
   }
   &__name {
     margin-right: 21px;

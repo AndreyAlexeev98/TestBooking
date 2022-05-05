@@ -1,11 +1,16 @@
 .header {
   background: url('/assets/img/pictures/bg-header.png') center center/cover no-repeat;
   font-family: Roboto, sans-serif;
+  margin-bottom: 46px;
+  @include phones {
+    margin-bottom: 29px;
+  }
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-between; 
     padding: 20px 0;
+    column-gap: 10px;
     @include tablets {
       padding: 0;
     }
@@ -66,12 +71,19 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    button {
-      margin-right: 27px;
+    gap: 10px 20px;
+    .button {
+      margin-right: 7px;
       @include tablets-sm {
         margin-right: 10px;
         font-size: 13px;
+        white-space: normal;
       }
+    }
+    .booking-input-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
     }
     @include phones {
       display: none;

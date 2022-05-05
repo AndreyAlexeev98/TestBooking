@@ -11,31 +11,23 @@
 }
 
 .btn-color {
-  padding: 10px 16px;
   background-color: $color_sky;
-  border-radius: 3px; 
+  will-change: background-color;
   color: $color-white;
-  font-style: normal;
   font-weight: 500;
-  cursor: pointer;
-  transition: background-color .3s;
+  transition: background-color .3s, color .3s, border-color .3s;
   &:hover {
     background-color: $color_turquoise;
-    transition: background-color .3s;
+    transition: background-color .3s, color .3s, border-color .3s;
   }
 }
 
 .booking-input {
   width: 129px;
   height: 24px;
-  margin-right: 20px;
   @include tablets {
     display: none;
   }
-}
-
-.main {
-  margin-top: 46px;
 }
 
 .clock {
@@ -74,6 +66,7 @@
 .btn-add {
   display: flex;
   align-items: center;
+  padding: 10px 16px;
   &::before {
     content: '';
     display: inline-block;
@@ -92,4 +85,15 @@
   width: 22px;
   height: 12px;
   background: url('/assets/img/icons/arrow-down.svg');
+}
+
+.total {
+  display: flex;
+  gap: 11px;
+  &__name {
+    white-space: nowrap;
+    @include phones {
+      display: none;
+    }
+  }
 }

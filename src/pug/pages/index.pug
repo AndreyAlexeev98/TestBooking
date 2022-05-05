@@ -1,14 +1,21 @@
 extends ../layout/base
 
 block variables
-    - var title='Alexeev';
-    - var description='Хороший сайт';
+    - var title='Salud';
+    - var description='Platform for ordering a massage';
     - var pageClass='index-page';
 
 block content
   .container
     section.controls
-      .controls__title Bookings
+      .controls__row.controls__row--btn-add
+        +button('Добавить сеанс', 'btn-add', 'btn-color')
+      .controls__row.controls__row--title
+        h2.controls__title Bookings
+        .total  
+          .total__name К оплате:
+          .total__value 888
+          .total__currency €
       .controls__row.sessions
         .sessions__list
           .sessions__item.session.active
@@ -52,26 +59,15 @@ block content
               .session__price
                 .session__price-value 178
                 .session__price-currency €
-        .btn-color.sessions__btn
-          img.sessions__btn-icon(src='../assets/img/icons/add.svg')
-          .sessions__btn-name Добавить сеанс
+        +button('Добавить сеанс', 'btn-add', 'btn-color')
       form.controls__form
         .controls__row.radioBtn 
           .controls__col
             .radioBtn__name.controls__name  место
             .radioBtn__list 
-              //- label.radioBtn__item 
-              //-   input.radioBtn__hidden(type="radio" name='place' value='место - к себе' checked)
-              //-   div.radioBtn__visible к себе
-              //- label.radioBtn__item
-              //-   input.radioBtn__hidden(type="radio" name='place' value='место - к терапевту')
-              //-   div.radioBtn__visible к терапевту
-              //- label.radioBtn__item
-              //-   input.radioBtn__hidden(type="radio" name='place' value='место - не важно')
-              //-   div.radioBtn__visible не важно
               +changePlaceBtn('к себе')
               +changePlaceBtn('к терапевту', true)
-              +changePlaceBtn('не важно')
+              +changePlaceBtn('не важно', false, 'btnNotImportant')
           .controls__col
             .radioBtn__name.controls__name  длительность
             .radioBtn__list 
@@ -84,7 +80,7 @@ block content
               label.radioBtn__item
                 input.radioBtn__hidden(type="radio" name='time' value='длительность - 2 часа' id='2hour')
                 div.radioBtn__visible 2 часа
-      .controls__row.address-choice
+      .controls__row.controls__row--address-choice.address-choice
         +address('Адрес 1','Город, улица Название 15 дом 2')
         +address('Адрес 2','Город, Название улица 33 дом 9')
       .controls__row.address-select

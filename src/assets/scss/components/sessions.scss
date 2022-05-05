@@ -23,4 +23,10 @@
       margin-right: 16px;
     }
   }
+  .button {
+    height: min-content;
+    @include tablets {
+      display: none;
+    }
+  }
 }

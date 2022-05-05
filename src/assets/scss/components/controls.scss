@@ -1,15 +1,37 @@
 .controls {
   font-family: Roboto, sans-serif;
   margin-bottom: 76px;
-  &__title {
-    font-weight: 700;
-    font-size: rem(36);
-    line-height: 1.14;
-    color: $color-font;
-    margin-bottom: 56px;
-  }
   &__row {
     display: flex;
+    &.controls__row--btn-add {
+      display: none;
+      @include phones {
+        margin-bottom: 36px;
+        display: block;
+      }
+    }
+    &--title {
+      margin-bottom: 56px;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.14;
+      color: $color-font;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      * {
+        font-weight: 700;
+      }
+    }
+    &--address-choice {
+      margin-bottom: 54px;
+    }
+    .address-select__input {
+      width: 375px;
+      @include phones {
+        width: 286px;
+      }
+    }
   }
   &__name {
     color: $border-light;

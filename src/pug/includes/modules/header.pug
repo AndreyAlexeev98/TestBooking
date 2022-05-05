@@ -10,11 +10,11 @@ header.header
               .hamburger-menu__line
           .logo Booking Massage
         .header__center
-          button.btn-color.btn-add
-            div Добавить сеанс
-          input.booking-input(type="text")
-          input.booking-input(type="text")
-          input.booking-input(type="text")
+          +button('Добавить сеанс', 'btn-add', 'btn-color')
+          .booking-input-wrap
+            input.booking-input(type="text")
+            input.booking-input(type="text")
+            input.booking-input(type="text")
         .header__right 
           .profile-info
             .profile-info__notification.notification

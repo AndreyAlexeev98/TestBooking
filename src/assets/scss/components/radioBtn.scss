@@ -9,13 +9,15 @@
     display: none;
   }
   &__visible {
-    padding: 9px 30px;
+    padding: 9px 28px;
     color: $color_sky;
-    border-color: inherit;
+    border: 1px solid $color_sky;
     font-size: 20px;
     transition: background-color .3s, color .3s;
     cursor: pointer;
     line-height: 1.14;
+    height: 100%;
+    white-space: nowrap;
     &.active,
     &:hover {
       background-color: $color_sky;
@@ -25,18 +27,33 @@
   }
   &__list {
     display: flex;
-  }
-  &__item {
-    border: 1px solid $color_sky;
+    #btnNotImportant {
+      @include desktop-sm {
+        display: none;
+      }
+    }
   }
   &__item:not(:last-child) {
-    margin-right: -1px;
+    .radioBtn__visible {
+      margin-right: -1px;
+    }
   }
   &__item:first-child {
-    border-radius: 3px 0 0 3px;
+    .radioBtn__visible {
+      border-radius: 3px 0 0 3px;
+    }
+  }
+  &__item:nth-child(2) {
+    .radioBtn__visible {
+      @include tablets {
+        border-radius: 0 3px 3px 0;
+      }
+    }
   }
   &__item:last-child {
-    border-radius: 0 3px 3px 0;
+    .radioBtn__visible {
+      border-radius: 0 3px 3px 0;
+    }
   }
   &__name {
     margin-right: 21px;
@@ -44,8 +61,21 @@
   .controls__col {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    row-gap: 9px;
+    column-gap: 21px;
   }
   .controls__col:not(:last-child) {
     margin-right: 69px;
+  }
+  @include tablets {
+    flex-wrap: wrap;
+    row-gap: 9px;
+    .controls__col {
+      display: flex;
+      flex-direction: column;
+      row-gap: 17px;
+      align-items: flex-start;
+    }
   }
 } 

@@ -1,6 +1,7 @@
 .address-choice {
   display: flex;
-  margin-bottom: 54px;
+  gap: 18px 59px;
+  flex-wrap: wrap;
   &__hidden {
     display: none;
   }

@@ -5,14 +5,13 @@ mixin icon(name, className)
 mixin image(path, className)
   img(src=require(`images/${path}`).default class=className)
 
-
 mixin item(title, description)
   .item
     h2(class="item-title")= title
     p(class="item-description")= description
 
-mixin changePlaceBtn(place, checked)
-  label.radioBtn__item 
+mixin changePlaceBtn(place, checked, id)
+  label.radioBtn__item(id= id)
     input.radioBtn__hidden(type="radio" name='place' value=`место - ${place}` checked= checked)
     div.radioBtn__visible= place
 
@@ -56,3 +55,7 @@ mixin cards(people, active)
           .card__rating= person.rating
           a(href='#')
             img.card__feedback(src='../assets/img/icons/mail.svg')
+
+mixin button(text, main_class, other_class, id)
+  button.button(class= main_class, class= other_class, id= id)
+    div.text= text

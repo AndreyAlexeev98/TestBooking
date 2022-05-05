@@ -1,11 +1,19 @@
 .notification {
   position: relative;
   cursor: pointer;
+  &__icon {
+    width: 24px;
+    height: 30px;
+    margin-right: 20px;
+    background: url('/assets/img/icons/notification.svg');
+    object-fit: cover;
+    background-repeat: no-repeat;
+  }
   &__counter {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    color: #fff;
+    color: $color-white;
   }
 }

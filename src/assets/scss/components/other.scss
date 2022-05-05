@@ -1,28 +1,26 @@
-.container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-}
-
 .logo {
-  color: #fff;
+  color: $color-white;
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
   line-height: 1.14;
 }
 
-.btn {
+.rounded-elem {
+  border-radius: 3px;
+}
+
+.btn-color {
   padding: 10px 16px;
-  background-color: #00A3FF;
+  background-color: $color_sky;
   border-radius: 3px; 
-  color: #fff;
+  color: $color-white;
   font-style: normal;
   font-weight: 500;
   cursor: pointer;
   transition: background-color .3s;
   &:hover {
-    background-color: #00adbb;
+    background-color: $color_turquoise;
     transition: background-color .3s;
   }
 }
@@ -31,6 +29,9 @@
   width: 129px;
   height: 24px;
   margin-right: 20px;
+  @include tablets {
+    display: none;
+  }
 }
 
 .main {
@@ -68,4 +69,27 @@
   cursor: pointer;
   width: 11px;
   height: 12px;
+}
+
+.btn-add {
+  display: flex;
+  align-items: center;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 17px;
+    background: url('/assets/img/icons/add.svg');
+    object-fit: cover;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+  }
+}
+
+.icon-btn-user-menu {
+  display: inline-block;
+  width: 22px;
+  height: 12px;
+  background: url('/assets/img/icons/arrow-down.svg');
 }

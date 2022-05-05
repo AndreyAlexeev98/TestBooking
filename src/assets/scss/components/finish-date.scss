@@ -5,7 +5,7 @@
   margin-bottom: 24px;
   font-family: Inter, sans-serif;
   &__name {
-    color: #A8A8A8;
+    color: $color-lightGrey;
     margin-right: 28px;
     font-weight: 400;
   }
@@ -23,11 +23,11 @@
     }
   }
   &__date, &__time {
-    color: #00A3FF;
+    color: $color_sky;
   }
   .dash {
     height: 1px;
-    background-color: #E5E5E5;
+    background-color: $color-lightGrey-3;
     display: block;
   }
   .dash-small {

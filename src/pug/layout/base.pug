@@ -8,11 +8,13 @@ html(lang='ru')
         meta(charset='utf-8')
         title #{title}
         meta(name="description", content=description)
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
 
     body(class=pageClass)
-        include ../includes/modules/header
-        main.main
-            block content
-        include ../includes/modules/footer
+        .wrapper
+            include ../includes/modules/header
+            main.main
+                block content
+            include ../includes/modules/footer
 
     //- block script

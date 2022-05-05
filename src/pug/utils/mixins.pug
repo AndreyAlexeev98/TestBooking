@@ -1,3 +1,11 @@
+mixin icon(name, className)
+  svg(class=className preserveAspectRatio="none")
+    use(xlink:href=`../assets/img/icons/${name}.svg`)
+
+mixin image(path, className)
+  img(src=require(`images/${path}`).default class=className)
+
+
 mixin item(title, description)
   .item
     h2(class="item-title")= title

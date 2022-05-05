@@ -3,16 +3,16 @@
   margin-bottom: 76px;
   &__title {
     font-weight: 700;
-    font-size: 36px;
+    font-size: rem(36);
     line-height: 1.14;
-    color: #222222;
+    color: $color-font;
     margin-bottom: 56px;
   }
   &__row {
     display: flex;
   }
   &__name {
-    color: #A8A8A8;
+    color: $border-light;
     line-height: 1.14;
   }
 }

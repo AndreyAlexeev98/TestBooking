@@ -1,16 +1,16 @@
 .radioBtn {
   margin-bottom: 46px;
   &__hidden:checked + &__visible {
-    background-color: #00A3FF;
+    background-color: $color_sky;
     transition: background-color .3s, color .3s;
-    color: #fff;
+    color: $color-white;
   } 
   &__hidden {
     display: none;
   }
   &__visible {
     padding: 9px 30px;
-    color: #00A3FF;
+    color: $color_sky;
     border-color: inherit;
     font-size: 20px;
     transition: background-color .3s, color .3s;
@@ -18,16 +18,16 @@
     line-height: 1.14;
     &.active,
     &:hover {
-      background-color: #00A3FF;
+      background-color: $color_sky;
       transition: background-color .3s, color .3s;
-      color: #fff;
+      color: $color-white;
     }
   }
   &__list {
     display: flex;
   }
   &__item {
-    border: 1px solid #00a3ff;
+    border: 1px solid $color_sky;
   }
   &__item:not(:last-child) {
     margin-right: -1px;

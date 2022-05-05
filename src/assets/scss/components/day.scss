@@ -23,7 +23,7 @@
 
   &__number {
     font-size: 20px;
-    color: #222222;
+    color: $color-font;
     transition: color .3s;
     text-align: center;
   }
@@ -32,33 +32,33 @@
     color: rgba(168, 168, 168, .5);
     text-align: center;
     &.weekend {
-      color: #DC8D8D;
+      color: $color-coralPink ;
     }
   }
   &:hover,
   &.active {
     .day__number,
     .day__of-the-week  {
-      color: #fff;
+      color: $color-white;
       transition: color .3s;
       z-index: 9999;
     }
   }
   &:hover:before,
   &.active.day:before {
-    background-color: #00A3FF;
+    background-color: $color_sky;
     transition: background-color .3s;
     z-index: 999;
   }
   &.disactive {
     .day__number {
-      color: #fff;
+      color: $color-white;
       z-index: 1000;
     } 
     .day__of-the-week {
       color: rgba(168, 168, 168, .5);
       &.weekend {
-        color: #DC8D8D;
+        color: $color-coralPink;
       }
     }
   }
@@ -67,7 +67,7 @@
   }
   &:hover.disactive {
     .day__number {
-      color: #fff;
+      color: $color-white;
     }
   }
 }

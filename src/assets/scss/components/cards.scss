@@ -10,13 +10,13 @@
   &__title {
     font-weight: 700;
     font-size: 36px;
-    color: #222222;
+    color: $color-font;
   }
   &__btn {
-    background-color: #00A3FF;
+    background-color: $color_sky;
     border-radius: 3px;
     padding: 9px 28px;
-    color: #fff;
+    color: $color-white;
     font-size: 20px;
     cursor: pointer;
     span {

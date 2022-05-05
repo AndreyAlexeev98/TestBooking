@@ -1,26 +1,91 @@
 .header {
-  background: url('/assets/img/pictures/bg-header.png') no-repeat;
-  background-size: cover;
+  background: url('/assets/img/pictures/bg-header.png') center center/cover no-repeat;
   font-family: Roboto, sans-serif;
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-between; 
     padding: 20px 0;
+    @include tablets {
+      padding: 0;
+    }
   }
   &__top-background {
     background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(35px);
   }
   &__left {
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
     .logo {
       width: min-content;
+      @include tablets {
+        font-size: 16px;
+      }
     }
   }
-  &__center .btn {
-    margin-right: 27px;
+  &__menu-btn {
+    width: 40px;
+    height: 40px;
+    background-color: $color_sky;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-right: 24px;
+    cursor: pointer;
+    @include tablets {
+      display: flex;
+    }
+    @include phones {
+      width: 100px;
+      height: 100px;
+      margin-left: -5%;
+      margin-right: 33px;
+    }
+    .hamburger-menu {
+      @include phones {
+        width: 46px;
+        height: 32px;
+      }
+      &__line {
+        @include phones {
+          height: 4px;
+        }
+      }
+      &--active {
+        .hamburger-menu__line:nth-child(3) {
+          @include phones {
+            bottom: 6px;
+          }
+        }
+      }
+    }
+  }
+  &__center {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    button {
+      margin-right: 27px;
+      @include tablets-sm {
+        margin-right: 10px;
+        font-size: 13px;
+      }
+    }
+    @include phones {
+      display: none;
+    }
+  } 
+  &__right {
+    @include tablets {
+      margin: 20px 0;
+    }
   }
   &__bottom {
     height: 190px;
+    @include phones {
+      display: none;
+    }
   }
 }

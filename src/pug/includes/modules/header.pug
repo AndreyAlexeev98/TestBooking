@@ -3,19 +3,25 @@ header.header
     .container
       .header__top
         .header__left
+          .header__menu-btn.rounded-elem
+            .hamburger-menu
+              .hamburger-menu__line
+              .hamburger-menu__line
+              .hamburger-menu__line
           .logo Booking Massage
         .header__center
-          button.btn New booking
+          button.btn-color.btn-add
+            div Добавить сеанс
           input.booking-input(type="text")
           input.booking-input(type="text")
           input.booking-input(type="text")
         .header__right 
           .profile-info
             .profile-info__notification.notification
-              img.notification__icon(src='../assets/img/icons/notification.svg')
+              .notification__icon
               .notification__counter 1
             .profile-info__user-avatar 
               img.icon-avatar(src='../assets/img/pictures/people.png')
             .profile-info__menu-btn
-              img.icon-menu-btn(src='../assets/img/icons/menu-btn.svg')
+              .icon-btn-user-menu
   .header__bottom

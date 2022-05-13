@@ -1,5 +1,4 @@
-import "./js/activeCard";
-import "./js/sliderCanendar";
-import "./js/timeCounter";
+import "./js/testModule";
+
 import "./assets/css/main.css";
 import "./assets/scss/main.scss";

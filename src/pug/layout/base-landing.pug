@@ -1,0 +1,19 @@
+include ../utils/mixins
+
+
+block variables
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        title #{title}
+        meta(name="description", content=description)
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
+        meta(name='lol' content='бейс лендинг')
+
+    body(class=pageClass)
+        .wrapper.wrapper--base-landing
+            main.main
+                block content
+            //- include ../includes/modules/header-landing
+            include ../includes/modules/footer

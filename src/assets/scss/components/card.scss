@@ -44,12 +44,10 @@
     font-size: 20px;
     color: $color-black;
     margin-bottom: 46px;
-    font-family: Inter, sans-serif;
     font-weight: 400;
   }
   &__desc {
     cursor: pointer;
-    font-family: Inter, sans-serif;
     font-weight: 400;
     .schedule-icon {
       margin-right: 18px;
@@ -68,7 +66,6 @@
     position: absolute;
     left: -2px;
     top: 30px;
-    font-family: Inter, sans-serif;
     font-weight: 500;
   }
   &__feedback {
@@ -88,7 +85,6 @@
       padding: 9px;
       background-color: transparent;
       color: $border-light;
-      font-family: 'Roboto', sans-serif;
       cursor: pointer;
     }
     .card__choice {

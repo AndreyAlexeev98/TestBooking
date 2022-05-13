@@ -1,9 +1,10 @@
 .header {
   background: url('/assets/img/pictures/bg-header.png') center center/cover no-repeat;
-  font-family: Roboto, sans-serif;
-  margin-bottom: 46px;
-  @include phones {
-    margin-bottom: 29px;
+  &-main {
+    margin-bottom: 46px;
+    @include phones {
+      margin-bottom: 29px;
+    }
   }
   &__top {
     display: flex;

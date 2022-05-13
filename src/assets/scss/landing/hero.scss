@@ -1,0 +1,30 @@
+.landing-page {
+  .hero {
+    height: 100vh;
+    min-height: 40.625rem;
+    background: url('/assets/img/pictures/bg_hero_landing.png') center center/cover no-repeat;
+    position: relative;
+    &__info {
+      background: linear-gradient(180deg, rgba(0, 163, 255, 0.1) 0%, rgba(0, 163, 255, 0) 94%);
+      backdrop-filter: blur(50px);
+      position: absolute;
+      bottom: 10vw;
+      padding: 28px 132px 40px 0px;
+      .info {
+        &__content {
+          max-width: 747px;
+        }
+        &__title {
+          font-size: 48px;
+          color: $color-Orient;
+          font-weight: 900;
+        }
+        &__desc {
+          font-size: 24px;
+          line-height: 1.16;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+extends ../layout/base-landing.pug
+
+block variables
+    - var title='Salud';
+    - var description='Salud landing page';
+    - var pageClass='landing-page';
+
+block content
+  section.hero
+    include ../includes/modules/header-landing
+    .hero__info.info 
+      .info__content
+        .info__title Терапевтический массаж с индивидуальным подходом
+        .info__desc Массаж обладает многими целебными свойствами и поэтому является замечательным природным способом получения и поддержания хорошего здоровья.

@@ -1,0 +1,19 @@
+.landing-page {
+  .header-landing {
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    background: rgba(0,0,0,.1);
+    backdrop-filter: blur(35px);
+  }
+  .header {
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 0;
+    }
+    .button {
+      padding: 9px 35px;
+    }
+  }
+}
